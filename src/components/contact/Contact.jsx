@@ -10,18 +10,18 @@ import SocialMedia from "../common/socialMedia/SocialMedia";
 const addressData = [
   {
     icon: faLocationDot,
-    title: "Address",
-    description: "New Mexico, 31134",
+    title: "Địa chỉ",
+    description: "51 Thành Thái, phường 14, quận 10, TP.HCM",
   },
   {
     icon: faEnvelope,
-    title: "My Email",
-    description: "mymail@mail.com",
+    title: "Email",
+    description: "quanghuy37934@mail.com",
   },
   {
     icon: faPhone,
-    title: "Call Me Now",
-    description: "00-123 00000",
+    title: "Số điện thoại",
+    description: "0909 179 042",
   },
 ];
 

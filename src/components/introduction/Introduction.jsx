@@ -6,18 +6,18 @@ import InformationSummary from "./InformationSummary";
 const informationSummaryData = [
   {
     id: 1,
-    title: "Experience",
-    description: "15 Y.",
+    title: "Kinh nghiệm lập trình",
+    description: "10 năm.",
   },
   {
     id: 2,
-    title: "Projects Completed",
-    description: "250+",
+    title: "Dự án hoàn thành",
+    description: "25+",
   },
   {
     id: 3,
-    title: "Happy Clients",
-    description: "58",
+    title: "Đội ngũ phát triển",
+    description: "> 10 người",
   },
 ];
 
@@ -30,23 +30,27 @@ const Introduction = () => {
       <div className="w-full flex flex-col justify-between max-lg:text-center">
         <div className="pt-13 me-31.5 w-full lg:w-auto transition-all duration-500">
           <p className="text-3xl xxs:text-4xl sm:max-xl:text-5xl xl:text-6xl font-semibold w-full">
-            Hello, I’m
+            Xin chào, tôi là
             <span className="text-nowrap shrink-0 inline-block w-full">
-              Brooklyn Gilbert
+              Huy Phần Mềm
             </span>
           </p>
           <p className="text-xs xxs:text-lg lg:text-[18px] my-6">
-            I'm a Freelance <span className="bg-highlight">UI/UX Designer</span>{" "}
-            and <span className="bg-highlight"> Developer</span> based in
-            London, England. I strives to build immersive and beautiful web
-            applications through carefully crafted code and user-centric design.
+            Tôi là một{" "}
+            <span className="bg-highlight text-xl lg:text-2xl font-bold">
+              Kỹ Sư Phần Mềm
+            </span>{" "}
+            đang sinh sống ở quận 10, thành phố Hồ Chí Minh. Mỗi ngày, tôi đều
+            trò chuyện với khách hàng để lắng nghe khó khăn của họ, rồi biến
+            những thách thức đó thành giải pháp phần mềm tinh gọn, hiệu quả và
+            dễ dùng.
           </p>
           <p className="text-center lg:text-start">
             <a
               className="btn-primary btn btn-xs xxs:btn-lg text-white"
               href="mailto:example@gmail.com"
             >
-              Say Hello!
+              Liên hệ
             </a>
           </p>
         </div>

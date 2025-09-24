@@ -3,12 +3,12 @@ import logo from "../../../assets/logo.png";
 import { Link } from "react-scroll";
 
 const navItems = [
-  { id: 1, name: "Home", url: "introduction" },
-  { id: 2, name: "About", url: "profile" },
-  { id: 3, name: "Process", url: "work-process" },
-  { id: 4, name: "Portfolio", url: "portfolio" },
-  { id: 5, name: "Blog", url: "blog" },
-  { id: 6, name: "Services", url: "services" },
+  { id: 1, name: "Giới thiệu", url: "introduction" },
+  { id: 2, name: "Công việc", url: "profile" },
+  { id: 3, name: "Quy trình", url: "work-process" },
+  { id: 4, name: "Dự án", url: "portfolio" },
+  { id: 5, name: "Chuyện trong nghề", url: "blog" },
+  { id: 6, name: "Công việc", url: "services" },
 ];
 
 const handleMenuClick = () => {
@@ -94,7 +94,7 @@ const NavBar = () => {
           >
             <img src={logo} className="h-8 sm:h-14 rounded-2xl" alt="logo" />
             <p className="text-2xl sm:text-[32px] my-auto ms-[12px] font-semibold">
-              Brooklyn
+              Huy Phần Mềm
             </p>
           </Link>
         </div>
@@ -111,7 +111,7 @@ const NavBar = () => {
               smooth={true}
               duration={900}
             >
-              Contact
+              Liên hệ
             </Link>
           </p>
         </div>
