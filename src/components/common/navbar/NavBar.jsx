@@ -7,7 +7,7 @@ const navItems = [
   { id: 2, name: "Công việc", url: "profile" },
   { id: 3, name: "Quy trình", url: "work-process" },
   { id: 4, name: "Dự án", url: "portfolio" },
-  { id: 5, name: "Chuyện trong nghề", url: "blog" },
+  { id: 5, name: "Chuyện nghề", url: "blog" },
   { id: 6, name: "Công việc", url: "services" },
 ];
 

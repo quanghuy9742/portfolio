@@ -7,7 +7,7 @@ const informationSummaryData = [
   {
     id: 1,
     title: "Kinh nghiệm lập trình",
-    description: "10 năm.",
+    description: "10 năm",
   },
   {
     id: 2,
@@ -50,7 +50,7 @@ const Introduction = () => {
               className="btn-primary btn btn-xs xxs:btn-lg text-white"
               href="mailto:example@gmail.com"
             >
-              Liên hệ
+              Phone & Zalo: 0909 179 042
             </a>
           </p>
         </div>

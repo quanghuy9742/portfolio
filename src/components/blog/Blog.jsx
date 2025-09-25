@@ -80,7 +80,7 @@ const Blog = () => {
   return (
     <div className="content py-25 px-2 relative" id="blog">
       <div className="max-w-135 text-center mx-auto pb-17.5">
-        <p className="section-title pb-6">Chuyện trong nghề</p>
+        <p className="section-title pb-6">Chuyện nghề</p>
         <p className="text-xs xs:text-[16px] md:text-lg text-gray-400">
           Đây là nơi tôi tâm sự và chia sẻ những câu chuyện mà mình đã trải qua sau 10
           năm làm nghề lập trình. Hy vọng bạn tìm thấy điều gì đó hữu ích cho mình.
