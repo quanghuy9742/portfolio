@@ -1,3 +1,6 @@
+import { useState } from "react";
+import emailjs from "@emailjs/browser";
+
 const telegramSVG = (
   <svg
     className="w-4 md:w-6 aspect-square"
@@ -16,6 +19,68 @@ const commonClass =
   "input input-lg border-0 border-b-2 focus:outline-none focus:placeholder:text-picto-primary placeholder:text-[15px] md:placeholder:text-lg focus:border-picto-primary border-[#E6E8EB] w-full rounded-none px-0";
 
 const Form = () => {
+  const [formData, setFormData] = useState({
+    name: "",
+    phone: "",
+    budget: "",
+    message: "",
+  });
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitStatus, setSubmitStatus] = useState(null);
+
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormData({
+      ...formData,
+      [name]: value,
+    });
+  };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    setIsSubmitting(true);
+    setSubmitStatus(null);
+
+    try {
+      const serviceId = import.meta.env.VITE_EMAILJS_SERVICE_ID;
+      const templateId = import.meta.env.VITE_EMAILJS_TEMPLATE_ID;
+      const publicKey = import.meta.env.VITE_EMAILJS_PUBLIC_KEY;
+
+      console.log("EmailJS Config:", { serviceId, templateId, publicKey: publicKey?.substring(0, 5) + "..." });
+
+      const result = await emailjs.send(
+        serviceId,
+        templateId,
+        {
+          from_name: formData.name,
+          from_phone: formData.phone,
+          budget: formData.budget,
+          message: formData.message,
+          to_email: "quanghuy37934@mail.com",
+        },
+        publicKey
+      );
+
+      console.log("EmailJS Success:", result);
+
+      setSubmitStatus({ type: "success", message: "Gửi thành công! Tôi sẽ liên hệ lại sớm nhất có thể." });
+      setFormData({
+        name: "",
+        phone: "",
+        budget: "",
+        message: "",
+      });
+    } catch (error) {
+      console.error("EmailJS Error:", error);
+      setSubmitStatus({
+        type: "error",
+        message: "Có lỗi xảy ra. Vui lòng thử lại hoặc liên hệ trực tiếp qua email.",
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
+  };
+
   return (
     <div>
       <p className="text-[12px] xs:text-[14px] max-lg:text-center sm:text-lg font-normal text-soft-dark">
@@ -23,36 +88,60 @@ const Form = () => {
         tôi sẽ liên hệ lại với bạn sớm nhất có thể.
       </p>
       <div className="mx-2">
-        <form className="flex flex-col gap-4 mt-4">
+        {submitStatus && (
+          <div
+            className={`mt-4 p-4 rounded-lg ${
+              submitStatus.type === "success"
+                ? "bg-green-100 text-green-800"
+                : "bg-red-100 text-red-800"
+            }`}
+          >
+            {submitStatus.message}
+          </div>
+        )}
+        <form className="flex flex-col gap-4 mt-4" onSubmit={handleSubmit}>
           <input
             type="text"
+            name="name"
             placeholder="Tên*"
             className={`${commonClass}`}
+            value={formData.name}
+            onChange={handleChange}
             required
           />
           <input
             type="text"
+            name="phone"
             placeholder="Số điện thoại*"
             className={`${commonClass}`}
+            value={formData.phone}
+            onChange={handleChange}
             required
           />
           <input
             type="text"
+            name="budget"
             placeholder="Ngân sách*"
             className={`${commonClass}`}
+            value={formData.budget}
+            onChange={handleChange}
             required
           />
           <input
             type="text"
+            name="message"
             placeholder="Nội dung*"
             className={`${commonClass}`}
+            value={formData.message}
+            onChange={handleChange}
             required
           />
           <button
             type="submit"
+            disabled={isSubmitting}
             className="btn gap-3 max-lg:mx-auto btn-primary rounded-sm mt-5 text-[13px] md:text-[16px] w-fit font-semibold lg:mt-12.5 p-2 md:px-4"
           >
-            Gửi {telegramSVG}
+            {isSubmitting ? "Đang gửi..." : "Gửi"} {!isSubmitting && telegramSVG}
           </button>
         </form>
       </div>

@@ -22,7 +22,15 @@ git clone https://github.com/themewagon/picto.git
 npm i
 ```
 
-3. Run the development server:
+3. Configure Environment Variables
+
+Copy `.env.example` to `.env` and update with your EmailJS credentials:
+
+```
+cp .env.example .env
+```
+
+4. Run the development server:
 
 ```bash
 npm run dev
@@ -32,6 +40,12 @@ yarn dev
 pnpm dev
 # or
 bun dev
+```
+
+5. Deploy to GitHub Pages
+
+```bash
+npm run deploy
 ```
 
 ## Author
