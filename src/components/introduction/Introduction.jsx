@@ -1,4 +1,4 @@
-import person from "../../assets/images/person.png";
+import person from "../../assets/images/huy.png";
 import "./introduction.css";
 import InformationSummary from "./InformationSummary";
 
@@ -48,7 +48,7 @@ const Introduction = () => {
           <p className="text-center lg:text-start">
             <a
               className="btn-primary btn btn-xs xxs:btn-lg text-white"
-              href="mailto:example@gmail.com"
+              href="mailto:quanghuy37934@gmail.com"
             >
               Phone & Zalo: 0909 179 042
             </a>
