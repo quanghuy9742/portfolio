@@ -16,8 +16,8 @@ const informationSummaryData = [
   },
   {
     id: 3,
-    title: "Đội ngũ phát triển",
-    description: "> 10 người",
+    title: "Khách hàng",
+    description: "50+",
   },
 ];
 

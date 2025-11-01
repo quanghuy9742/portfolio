@@ -6,7 +6,7 @@ const navItems = [
   { id: 2, name: "Công việc", url: "About" },
   { id: 3, name: "Quy trình", url: "Process" },
   { id: 4, name: "Dự án", url: "Portfolio" },
-  { id: 5, name: "Chuyện nghề", url: "Blog" },
+  { id: 5, name: "Blog", url: "Blog" },
   { id: 6, name: "Công việc", url: "Services" },
   { id: 7, name: "Liên hệ", url: "Contact" },
 ];
@@ -23,7 +23,7 @@ const Footer = () => {
           </p>
         </a>
         <div className="mx-7 max-md:my-7 text-center">
-          {navItems.map((item) => (
+          {/* {navItems.map((item) => (
             <a
               key={item.id}
               className="mx-2 group inline-block relative w-fit text-[12px] sm:text-[16px]"
@@ -32,7 +32,7 @@ const Footer = () => {
               {item.name}
               <span className="absolute left-0 bottom-0 h-0.5 w-full bg-white scale-x-0 duration-300 group-hover:scale-x-100"></span>
             </a>
-          ))}
+          ))} */}
         </div>
         <p className="text-[12px] sm:text-[16px]">
           Copyright &copy; {copyrightYear} Huy Phần Mềm.

@@ -4,11 +4,12 @@ import { Link } from "react-scroll";
 
 const navItems = [
   { id: 1, name: "Giới thiệu", url: "introduction" },
-  { id: 2, name: "Công việc", url: "profile" },
-  { id: 3, name: "Quy trình", url: "work-process" },
-  { id: 4, name: "Dự án", url: "portfolio" },
-  { id: 5, name: "Chuyện nghề", url: "blog" },
-  { id: 6, name: "Công việc", url: "services" },
+  // { id: 2, name: "Công việc", url: "profile" },
+  // { id: 3, name: "Quy trình", url: "work-process" },
+  { id: 2, name: "Dự án", url: "portfolio" },
+  { id: 3, name: "Video", url: "video-knowledge" },
+  { id: 4, name: "Blog", url: "blog" },
+  // { id: 6, name: "Công việc", url: "services" },
 ];
 
 const handleMenuClick = () => {
