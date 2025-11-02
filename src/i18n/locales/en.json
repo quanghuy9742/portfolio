@@ -1,0 +1,133 @@
+{
+  "nav": {
+    "introduction": "Introduction",
+    "portfolio": "Portfolio",
+    "video": "Video",
+    "contact": "Contact",
+    "logoName": "Huy Software"
+  },
+  "introduction": {
+    "greeting": "Hello, I'm",
+    "name": "Huy Software",
+    "description": "I am a",
+    "profession": "Software Engineer",
+    "location": "living in District 10, Ho Chi Minh City. Every day, I communicate with clients to listen to their challenges, then transform those challenges into lean, efficient, and user-friendly software solutions.",
+    "phone": "Phone & Viber: 0909 179 042"
+  },
+  "summary": {
+    "experience": "Programming Experience",
+    "experienceValue": "10 years",
+    "projects": "Completed Projects",
+    "projectsValue": "25+",
+    "clients": "Clients",
+    "clientsValue": "50+"
+  },
+  "video": {
+    "title": "Software Knowledge Videos",
+    "description": "Some instructional videos and knowledge sharing about software that I have created."
+  },
+  "contact": {
+    "title": "Get in Touch",
+    "description": "I'm always ready for conversations about new ideas. Don't hesitate to contact me via email, phone, or social media.",
+    "address": "Address",
+    "addressValue": "51 Thanh Thai, Ward 14, District 10, Ho Chi Minh City",
+    "email": "Email",
+    "emailValue": "quanghuy37934@mail.com",
+    "phone": "Phone",
+    "phoneValue": "0909 179 042",
+    "formTitle": "Get in Touch",
+    "formDescription": "If it's not convenient to call, please fill in the form below and I will contact you as soon as possible.",
+    "namePlaceholder": "Name*",
+    "phonePlaceholder": "Phone*",
+    "budgetPlaceholder": "Budget*",
+    "messagePlaceholder": "Message*",
+    "send": "Send",
+    "sending": "Sending...",
+    "success": "Sent successfully! I will contact you as soon as possible.",
+    "error": "An error occurred. Please try again or contact directly via email."
+  },
+  "profession": {
+    "title": "My Work",
+    "description": "I usually summarize my work with the following quote:",
+    "quote": "Turning software ideas into reality",
+    "contact": "Contact Now"
+  },
+  "portfolio": {
+    "title": "Portfolio",
+    "description": "Here are some outstanding projects I've completed for corporate and individual clients",
+    "moreProjects": "...and many more projects",
+    "categories": {
+      "websiteSystem": "WEBSITE & SYSTEM DEVELOPMENT",
+      "app": "MOBILE APP DEVELOPMENT",
+      "appSystem": "MOBILE APP & SYSTEM DEVELOPMENT"
+    },
+    "projects": {
+      "1": {
+        "category": "websiteSystem",
+        "title": "Dragon Viet Invest Stock Trading Competition Management System",
+        "description": "I helped Dragon Viet Securities build a system to organize and manage stock trading competitions. The system has been running stably since 2023, helping the company attract thousands of potential customers annually."
+      },
+      "2": {
+        "category": "websiteSystem",
+        "title": "Duong Minh Logistics Import-Export Process Management System",
+        "description": "I helped Duong Minh Logistics build an import-export process management system. The system helps the company optimize workflows, minimize employee errors, and enhance customer satisfaction."
+      },
+      "3": {
+        "category": "app",
+        "title": "TabDragon App - Dragon Viet Stock Trading",
+        "description": "I helped Dragon Viet Securities build a stock trading app on Android and iOS. The app helps customers trade stocks quickly and conveniently on the Vietnamese stock exchange."
+      },
+      "4": {
+        "category": "app",
+        "title": "S24 E-commerce App",
+        "description": "I helped Nhat Vinh Company build the S24 e-commerce app on Android and iOS. The app helps the company expand sales channels and reach more customers in Binh Thuan province."
+      },
+      "5": {
+        "category": "appSystem",
+        "title": "Gao Viet Sales App",
+        "description": "I helped Gao Viet Company build a sales app on Android and iOS. The app helps the company serve customers effectively and increase sales."
+      },
+      "6": {
+        "category": "websiteSystem",
+        "title": "FiHome Real Estate Post Management System",
+        "description": "I helped FiHome Real Estate Company build a system that helps customers post real estate listings for sale and rent on Android and iOS platforms. The system helps the company attract many potential customers and increase sales through real estate transactions."
+      },
+      "7": {
+        "category": "app",
+        "title": "Alligate Bluetooth Door Lock App",
+        "description": "I helped a Japanese partner build an app on the iOS platform. The app uses Bluetooth technology to unlock doors remotely, providing convenience and security for users."
+      },
+      "8": {
+        "category": "app",
+        "title": "Stock News App for Investors",
+        "description": "I helped an individual client create a stock news app on Android and iOS. The app provides the latest stock market news from popular sources, helping users get quick and accurate information to make smart investment decisions."
+      },
+      "9": {
+        "category": "app",
+        "title": "Stock News App for Brokers",
+        "description": "I helped a securities company director build a stock news app specifically for the company's brokerage team. The app provides the latest news and statistics about the stock market, helping the brokerage team get quick and accurate information to advise customers more effectively."
+      },
+      "10": {
+        "category": "app",
+        "title": "Hodace Latest Real Estate News App",
+        "description": "I helped an individual client build a real estate news app on Android and iOS. The app provides the latest posts in the real estate market from popular sources, helping buyers access good products as early as possible."
+      },
+      "11": {
+        "category": "app",
+        "title": "Online Cosmetics App",
+        "description": "I helped an individual client build an online cosmetics sales app on Android and iOS. The app displays products and helps users make online payments."
+      },
+      "12": {
+        "category": "app",
+        "title": "IDOL Alarm Clock App",
+        "description": "I helped a Japanese partner build an alarm clock app on the iOS platform. The app allows fans to set alarms with songs from a famous Japanese singer, providing an interesting and personalized experience for users."
+      }
+    }
+  },
+  "footer": {
+    "logoName": "Huy Software",
+    "copyright": "Copyright",
+    "contactText": "For inquiries, please contact"
+  }
+}
+

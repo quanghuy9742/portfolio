@@ -1,6 +1,8 @@
 import { lazy, Suspense } from "react";
-import { createBrowserRouter } from "react-router-dom";
+import { createBrowserRouter, Navigate } from "react-router-dom";
 import Loading from "../components/common/loading/Loading";
+import LanguageWrapper from "../components/common/language/LanguageWrapper";
+
 const Home = lazy(() => import("../pages/Home"));
 const Main = lazy(() => import("../layouts/Main"));
 
@@ -12,13 +14,23 @@ export const router = createBrowserRouter(
       path: `/`,
       element: (
         <Suspense fallback={<Loading />}>
-          <Main />
+          <LanguageWrapper>
+            <Main />
+          </LanguageWrapper>
         </Suspense>
       ),
       children: [
         {
           path: "/",
-          element: <Home></Home>,
+          element: <Navigate to="/vi" replace />,
+        },
+        {
+          path: "/vi",
+          element: <Home />,
+        },
+        {
+          path: "/en",
+          element: <Home />,
         },
       ],
     },

@@ -1,44 +1,43 @@
 import { useEffect, useState } from "react";
+import { useTranslation } from "react-i18next";
 import logo from "../../../assets/logo.png";
 import { Link } from "react-scroll";
 
-const navItems = [
-  { id: 1, name: "Giới thiệu", url: "introduction" },
-  // { id: 2, name: "Công việc", url: "profile" },
-  // { id: 3, name: "Quy trình", url: "work-process" },
-  { id: 2, name: "Dự án", url: "portfolio" },
-  { id: 3, name: "Video", url: "video-knowledge" },
-  // { id: 4, name: "Blog", url: "blog" },
-  // { id: 6, name: "Công việc", url: "services" },
-];
-
-const handleMenuClick = () => {
-  if (document.activeElement instanceof HTMLElement) {
-    document.activeElement.blur();
-  }
-};
-
-const menu = navItems.map((item) => (
-  <li key={item.id} onMouseDown={(e) => e.preventDefault()}>
-    <Link
-      onClick={handleMenuClick}
-      to={item.url.toLowerCase()}
-      smooth={true}
-      duration={1000}
-      spy={true}
-      offset={-140}
-      activeStyle={{
-        backgroundColor: "#9929fb",
-        color: "white",
-      }}
-      className={`hover:text-picto-primary px-5 py-3 mx-1`}
-    >
-      {item.name}
-    </Link>
-  </li>
-));
-
 const NavBar = () => {
+  const { t } = useTranslation();
+
+  const navItems = [
+    { id: 1, name: t("nav.introduction"), url: "introduction" },
+    { id: 2, name: t("nav.portfolio"), url: "portfolio" },
+    { id: 3, name: t("nav.video"), url: "video-knowledge" },
+  ];
+
+  const handleMenuClick = () => {
+    if (document.activeElement instanceof HTMLElement) {
+      document.activeElement.blur();
+    }
+  };
+
+  const menu = navItems.map((item) => (
+    <li key={item.id} onMouseDown={(e) => e.preventDefault()}>
+      <Link
+        onClick={handleMenuClick}
+        to={item.url.toLowerCase()}
+        smooth={true}
+        duration={1000}
+        spy={true}
+        offset={-140}
+        activeStyle={{
+          backgroundColor: "#9929fb",
+          color: "white",
+        }}
+        className={`hover:text-picto-primary px-5 py-3 mx-1`}
+      >
+        {item.name}
+      </Link>
+    </li>
+  ));
+
   const [position, setPosition] = useState(0);
 
   useEffect(() => {
@@ -95,12 +94,12 @@ const NavBar = () => {
           >
             <img src={logo} className="h-8 sm:h-14 rounded-2xl" alt="logo" />
             <p className="text-2xl sm:text-[32px] my-auto ms-[12px] font-semibold">
-              Huy Phần Mềm
+              {t("nav.logoName")}
             </p>
           </Link>
         </div>
 
-        <div className="lg:flex items-center">
+        <div className="lg:flex items-center gap-2">
           <ul className="hidden lg:flex menu menu-horizontal text-[16px] font-medium md:shrink-0">
             {menu}
           </ul>
@@ -112,7 +111,7 @@ const NavBar = () => {
               smooth={true}
               duration={900}
             >
-              Liên hệ
+              {t("nav.contact")}
             </Link>
           </p>
         </div>

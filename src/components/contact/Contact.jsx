@@ -1,3 +1,4 @@
+import { useTranslation } from "react-i18next";
 import {
   faEnvelope,
   faLocationDot,
@@ -7,25 +8,27 @@ import Address from "./Address";
 import Form from "./Form";
 import SocialMedia from "../common/socialMedia/SocialMedia";
 
-const addressData = [
-  {
-    icon: faLocationDot,
-    title: "Địa chỉ",
-    description: "51 Thành Thái, phường 14, quận 10, TP.HCM",
-  },
-  {
-    icon: faEnvelope,
-    title: "Email",
-    description: "quanghuy37934@mail.com",
-  },
-  {
-    icon: faPhone,
-    title: "Số điện thoại",
-    description: "0909 179 042",
-  },
-];
-
 const Contact = () => {
+  const { t } = useTranslation();
+
+  const addressData = [
+    {
+      icon: faLocationDot,
+      title: t("contact.address"),
+      description: t("contact.addressValue"),
+    },
+    {
+      icon: faEnvelope,
+      title: t("contact.email"),
+      description: t("contact.emailValue"),
+    },
+    {
+      icon: faPhone,
+      title: t("contact.phone"),
+      description: t("contact.phoneValue"),
+    },
+  ];
+
   return (
     <div className="relative -bottom-15 -mt-15 z-10 px-2">
       <div
@@ -36,12 +39,10 @@ const Contact = () => {
           <div>
             <div>
               <p className="text-[35px] max-lg:hidden font-semibold text-nowrap text-[#132238]">
-                Hãy liên hệ với tôi
+                {t("contact.title")}
               </p>
               <p className="text-[12px] xs:text-[14px] sm:text-lg md:text-lg max-lg:text-center pt-4 font-normal text-soft-dark">
-                Tôi luôn sẵn sàng cho các cuộc trò chuyện về ý tưởng mới. Đừng
-                ngần ngại liên hệ với tôi qua email, điện thoại hoặc mạng xã
-                hội.
+                {t("contact.description")}
               </p>
             </div>
             <div className="my-8.75 sm:max-lg:flex justify-between items-center">
@@ -55,7 +56,7 @@ const Contact = () => {
           </div>
           <div className="w-full overflow-y-scroll py-6.5">
             <p className="text-xl mb-2 xs:text-2xl sm:text-2xl md:text-[38px] font-semibold text-[#132238] lg:hidden text-center">
-              Hãy liên hệ với tôi
+              {t("contact.formTitle")}
             </p>
             <Form />
           </div>

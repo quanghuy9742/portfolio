@@ -1,27 +1,30 @@
+import { useTranslation } from "react-i18next";
 import person from "../../assets/images/huy.png";
 import "./introduction.css";
 import InformationSummary from "./InformationSummary";
 
-// Information summary data
-const informationSummaryData = [
-  {
-    id: 1,
-    title: "Kinh nghiệm lập trình",
-    description: "10 năm",
-  },
-  {
-    id: 2,
-    title: "Dự án hoàn thành",
-    description: "25+",
-  },
-  {
-    id: 3,
-    title: "Khách hàng",
-    description: "50+",
-  },
-];
-
 const Introduction = () => {
+  const { t } = useTranslation();
+
+  // Information summary data
+  const informationSummaryData = [
+    {
+      id: 1,
+      title: t("summary.experience"),
+      description: t("summary.experienceValue"),
+    },
+    {
+      id: 2,
+      title: t("summary.projects"),
+      description: t("summary.projectsValue"),
+    },
+    {
+      id: 3,
+      title: t("summary.clients"),
+      description: t("summary.clientsValue"),
+    },
+  ];
+
   return (
     <div
       className="flex max-lg:flex-col-reverse sm:justify-between pt-10 lg:pt-31.5 lg:mb-27.5 max-xl:gap-2 p-2 max-xxl:px-4"
@@ -30,27 +33,24 @@ const Introduction = () => {
       <div className="w-full flex flex-col justify-between max-lg:text-center">
         <div className="pt-13 me-31.5 w-full lg:w-auto transition-all duration-500">
           <p className="text-3xl xxs:text-4xl sm:max-xl:text-5xl xl:text-6xl font-semibold w-full">
-            Xin chào, tôi là
+            {t("introduction.greeting")}
             <span className="text-nowrap shrink-0 inline-block w-full">
-              Huy Phần Mềm
+              {t("introduction.name")}
             </span>
           </p>
           <p className="text-xs xxs:text-lg lg:text-[18px] my-6">
-            Tôi là một{" "}
+            {t("introduction.description")}{" "}
             <span className="bg-highlight text-xl lg:text-2xl font-bold">
-              Kỹ Sư Phần Mềm
+              {t("introduction.profession")}
             </span>{" "}
-            đang sinh sống ở quận 10, thành phố Hồ Chí Minh. Mỗi ngày, tôi đều
-            trò chuyện với khách hàng để lắng nghe khó khăn của họ, rồi biến
-            những thách thức đó thành giải pháp phần mềm tinh gọn, hiệu quả và
-            dễ dùng.
+            {t("introduction.location")}
           </p>
           <p className="text-center lg:text-start">
             <a
               className="btn-primary btn btn-xs xxs:btn-lg text-white"
               href="mailto:quanghuy37934@gmail.com"
             >
-              Phone & Zalo: 0909 179 042
+              {t("introduction.phone")}
             </a>
           </p>
         </div>

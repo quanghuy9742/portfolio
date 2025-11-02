@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { useTranslation } from "react-i18next";
 import emailjs from "@emailjs/browser";
 
 const telegramSVG = (
@@ -19,6 +20,7 @@ const commonClass =
   "input input-lg border-0 border-b-2 focus:outline-none focus:placeholder:text-picto-primary placeholder:text-[15px] md:placeholder:text-lg focus:border-picto-primary border-[#E6E8EB] w-full rounded-none px-0";
 
 const Form = () => {
+  const { t } = useTranslation();
   const [formData, setFormData] = useState({
     name: "",
     phone: "",
@@ -63,7 +65,7 @@ const Form = () => {
 
       console.log("EmailJS Success:", result);
 
-      setSubmitStatus({ type: "success", message: "Gửi thành công! Tôi sẽ liên hệ lại sớm nhất có thể." });
+      setSubmitStatus({ type: "success", message: t("contact.success") });
       setFormData({
         name: "",
         phone: "",
@@ -74,7 +76,7 @@ const Form = () => {
       console.error("EmailJS Error:", error);
       setSubmitStatus({
         type: "error",
-        message: "Có lỗi xảy ra. Vui lòng thử lại hoặc liên hệ trực tiếp qua email.",
+        message: t("contact.error"),
       });
     } finally {
       setIsSubmitting(false);
@@ -84,8 +86,7 @@ const Form = () => {
   return (
     <div>
       <p className="text-[12px] xs:text-[14px] max-lg:text-center sm:text-lg font-normal text-soft-dark">
-        Nếu bạn không tiện gọi điện thì hãy điền thông tin vào form bên dưới,
-        tôi sẽ liên hệ lại với bạn sớm nhất có thể.
+        {t("contact.formDescription")}
       </p>
       <div className="mx-2">
         {submitStatus && (
@@ -103,7 +104,7 @@ const Form = () => {
           <input
             type="text"
             name="name"
-            placeholder="Tên*"
+            placeholder={t("contact.namePlaceholder")}
             className={`${commonClass}`}
             value={formData.name}
             onChange={handleChange}
@@ -112,7 +113,7 @@ const Form = () => {
           <input
             type="text"
             name="phone"
-            placeholder="Số điện thoại*"
+            placeholder={t("contact.phonePlaceholder")}
             className={`${commonClass}`}
             value={formData.phone}
             onChange={handleChange}
@@ -121,7 +122,7 @@ const Form = () => {
           <input
             type="text"
             name="budget"
-            placeholder="Ngân sách*"
+            placeholder={t("contact.budgetPlaceholder")}
             className={`${commonClass}`}
             value={formData.budget}
             onChange={handleChange}
@@ -130,7 +131,7 @@ const Form = () => {
           <input
             type="text"
             name="message"
-            placeholder="Nội dung*"
+            placeholder={t("contact.messagePlaceholder")}
             className={`${commonClass}`}
             value={formData.message}
             onChange={handleChange}
@@ -141,7 +142,7 @@ const Form = () => {
             disabled={isSubmitting}
             className="btn gap-3 max-lg:mx-auto btn-primary rounded-sm mt-5 text-[13px] md:text-[16px] w-fit font-semibold lg:mt-12.5 p-2 md:px-4"
           >
-            {isSubmitting ? "Đang gửi..." : "Gửi"} {!isSubmitting && telegramSVG}
+            {isSubmitting ? t("contact.sending") : t("contact.send")} {!isSubmitting && telegramSVG}
           </button>
         </form>
       </div>

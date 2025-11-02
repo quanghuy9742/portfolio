@@ -1,3 +1,5 @@
+import { useTranslation } from "react-i18next";
+
 const videos = [
   {
     id: 1,
@@ -14,14 +16,16 @@ const videos = [
 ];
 
 const WorkTogether = () => {
+  const { t } = useTranslation();
+
   return (
     <div className="py-25 max-w-169 mx-auto px-2" id="video-knowledge">
       <div className="text-center mb-6">
         <p className="text-white md:font-semibold text-2xl sm:text-3xl md:text-5xl pb-4">
-          Video kiến thức phần mềm
+          {t("video.title")}
         </p>
         <p className="text-[#A5ACB5] text-xs sm:text-lg font-normal text-center pb-4">
-          Một số video hướng dẫn và chia sẻ kiến thức về phần mềm mà tôi đã làm.
+          {t("video.description")}
         </p>
       </div>
 
