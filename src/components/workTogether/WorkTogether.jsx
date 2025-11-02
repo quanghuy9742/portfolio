@@ -29,19 +29,20 @@ const WorkTogether = () => {
         </p>
       </div>
 
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+      <div className="grid grid-cols-1 gap-6 max-w-4xl mx-auto">
         {videos.map((video) => (
           <div
             key={video.id}
             className="group relative overflow-hidden rounded-lg shadow-lg hover:shadow-xl transition-all duration-300"
           >
-            <div className="relative aspect-video">
+            <div className="relative aspect-video w-full">
               <iframe
                 className="w-full h-full"
-                src={`https://www.youtube.com/embed/${video.youtubeId}?rel=0`}
+                src={`https://www.youtube.com/embed/${video.youtubeId}?rel=0&modestbranding=1&showinfo=0`}
                 title={`YouTube video ${video.id}`}
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                 allowFullScreen
+                loading="lazy"
               ></iframe>
             </div>
           </div>
